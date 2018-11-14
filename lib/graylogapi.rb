@@ -5,6 +5,7 @@ require 'graylogapi/alerts'
 require 'graylogapi/client'
 require 'graylogapi/dashboards'
 require 'graylogapi/static_fields'
+require 'graylogapi/extractors'
 require 'graylogapi/streams'
 require 'graylogapi/system'
 require 'graylogapi/users'
@@ -46,6 +47,11 @@ class GraylogAPI
   # @return [GraylogAPI::StaticFields]
   def static_fields
     @static_fields ||= StaticFields.new(@client)
+  end
+
+  # @return [GraylogAPI::Extractors]
+  def extractors
+    @extractors ||= Extractors.new(@client)
   end
 
   # @return [GraylogAPI::Users]

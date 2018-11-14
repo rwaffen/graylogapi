@@ -6,8 +6,6 @@
 [gem]: https://rubygems.org/gems/graylogapi
 [travis]: https://travis-ci.org/postgred/graylogapi
 
-# I don't care about this repo anymore. I think you shouldn't use this.
-
 Ruby gem for working with [Graylog](https://www.graylog.org/) via the [Graylog REST API](http://docs.graylog.org/en/2.2/pages/configuration/rest_api.html?highlight=API)
 
 ## Installation
@@ -54,7 +52,7 @@ graylogapi = GraylogAPI.new(base_url: 'http://localhost:9000/api', token: 'token
 #### get Input by id
 
     graylogapi = GraylogAPI.new(base_url: 'http://localhost:9000/api', user: 'username', pass: 'password')
-    
+
     graylogapi.system.inputs.by_id('5947d3840b5712166af25009')
 
 You can find more examples [here](./examples/)
@@ -74,6 +72,9 @@ You can find more examples [here](./examples/)
 * **StaticFields**: Static fields of an input.
   * create(input_id, params) — Add a static field to an input.
   * delete(input_id, key) — Remove static field of an input.
+* **Extractors**: Extractors of an input.
+  * create(input_id, params) — Add a extractor to an input.
+  * delete(input_id, key) — Remove extractor of an input.
 * **Streams**: Manage streams
   * all — Get a list of all streams.
   * create(params) — Create a stream.
@@ -120,6 +121,7 @@ You can find more examples [here](./examples/)
 ## Copyright
 
 Copytight (c) 2017 Andrey Aleksandrov
+Copytight (c) 2018 Robert Waffen
 
 See [LICENSE][] for details.
 
