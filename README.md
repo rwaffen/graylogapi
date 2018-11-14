@@ -120,9 +120,8 @@ You can find more examples [here](./examples/)
 
 ## Copyright
 
-Copytight (c) 2017 Andrey Aleksandrov
-Copytight (c) 2018 Robert Waffen
+Copytight (c) 2017-2018 Andrey Aleksandrov, Robert Waffen
 
 See [LICENSE][] for details.
 
-[license]: LICENSE.md
+[license]: LICENSE

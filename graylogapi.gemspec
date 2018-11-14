@@ -7,13 +7,13 @@ require 'graylogapi/version'
 Gem::Specification.new do |spec|
   spec.name          = 'graylogapi'
   spec.version       = GraylogAPI::VERSION
-  spec.authors       = ['Andrey Aleksandrov']
-  spec.email         = ['postgred@gmail.com']
+  spec.authors       = ['Andrey Aleksandrov', 'Robert Waffen']
+  spec.email         = ['postgred@gmail.com', 'rwaffen@gmail.com']
   spec.license       = 'MIT'
 
   spec.summary       = 'Ruby gem for working with Graylog API'
   spec.description   = 'Allows you to work with graylog api from ruby'
-  spec.homepage      = 'https://github.com/postgred/graylogapi'
+  spec.homepage      = 'https://github.com/rwaffen/graylogapi'
 
   spec.files         = ['README.md', 'graylogapi.gemspec', 'LICENSE'] +
                        Dir['lib/**/*.rb']
