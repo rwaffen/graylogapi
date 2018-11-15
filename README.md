@@ -1,7 +1,7 @@
 # GraylogAPI
 
-[![Gem Version](https://img.shields.io/gem/v/graylogapi.svg)][gem]
-[![Build Status](http://img.shields.io/travis/rwaffen/graylogapi.svg)][travis]
+[![Gem Version](https://badge.fury.io/rb/graylogapi.svg)](https://badge.fury.io/rb/graylogapi)
+[![Build Status](https://travis-ci.com/rwaffen/graylogapi.svg?branch=master)](https://travis-ci.com/rwaffen/graylogapi)
 
 [gem]: https://rubygems.org/gems/graylogapi
 [travis]: https://travis-ci.com/rwaffen/graylogapi
