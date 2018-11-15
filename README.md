@@ -4,13 +4,14 @@
 [![Build Status](http://img.shields.io/travis/rwaffen/graylogapi.svg)][travis]
 
 [gem]: https://rubygems.org/gems/graylogapi
-[travis]: https://travis-ci.org/rwaffen/graylogapi
+[travis]: https://travis-ci.com/rwaffen/graylogapi
 
-Ruby gem for working with [Graylog](https://www.graylog.org/) via the [Graylog REST API](http://docs.graylog.org/en/2.2/pages/configuration/rest_api.html?highlight=API)
+Ruby gem for working with [Graylog](https://www.graylog.org/) via the [Graylog REST API](http://docs.graylog.org/en/2.4/pages/configuration/rest_api.html?highlight=API)
 
 ## Installation
 
     gem install graylogapi
+
 ## Dependencies
 
 - net/http
@@ -22,7 +23,7 @@ Ruby gem for working with [Graylog](https://www.graylog.org/) via the [Graylog R
 - [Graylog API docs][GraylogAPI]
 
 [Graylog]: https://www.graylog.org/
-[GraylogAPI]: http://docs.graylog.org/en/2.2/pages/configuration/rest_api.html?highlight=API
+[GraylogAPI]: http://docs.graylog.org/en/2.4/pages/configuration/rest_api.html?highlight=API
 
 ## Usage
 
