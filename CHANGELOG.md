@@ -1,66 +1,75 @@
 # Changelog
+
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## Unreleased
 
-## [1.3.1] - 2018-11-14
+## [1.3.2] - 2018-11-20
 
 ### Added
-- Add Extractors for Inputs
+
+-   Add Stream Rules for Streams
 
 ## Released
+
+## [1.3.1] - 2018-11-19
+
+### Added
+
+-   Add Extractors for Inputs
 
 ## [1.3.0] - 2017-22-10
 
 ### Added
-- Convert node's hostname to node_id
-- Convert input's type_id to type's name
+
+-   Convert node's hostname to node_id
+-   Convert input's type_id to type's name
 
 ## [1.2.1] - 2017-21-17
 
 ### Fixed
 
-- `options[:base_url]` can be with slash at the end
+-   `options[:base_url]` can be with slash at the end
 
 ## [1.2.0] - 2017-09-18
 
 ### Added
 
-- Get info about input types
-- Use name of type then create an input
-- Manage tokens of users
-- Get default index set
-- Authentication with token
-- Options for http read and http open timeouts
-- Support SSL
+-   Get info about input types
+-   Use name of type then create an input
+-   Manage tokens of users
+-   Get default index set
+-   Authentication with token
+-   Options for http read and http open timeouts
+-   Support SSL
 
 ### Changed
 
-- Rename Client.json_request to Client.request
+-   Rename Client.json_request to Client.request
 
 ## [1.1.0] - 2017-08-14
 
 ### Added
 
-- Manage dashboards
-- Manage static fields of inputs
-- Update and make default methods for System/IndexSets
+-   Manage dashboards
+-   Manage static fields of inputs
+-   Update and make default methods for System/IndexSets
 
 ## [1.0.0] - 2017-06-27
 
 ### Added
 
-- Mange stream alerts for all streams.
-- Manage streams.
-- System information of current node.
-- Node discovery.
-- Index sets.
-- Message inputs.
-- Check status of response(success or fail).
+-   Mange stream alerts for all streams.
+-   Manage streams.
+-   System information of current node.
+-   Node discovery.
+-   Index sets.
+-   Message inputs.
+-   Check status of response(success or fail).
 
 ### Changed
 
-- Start using changelog.
-- Use [] for response fields instead of body[] method.
+-   Start using changelog.
+-   Use \[] for response fields instead of body\[] method.

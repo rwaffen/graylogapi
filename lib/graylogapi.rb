@@ -7,6 +7,7 @@ require 'graylogapi/dashboards'
 require 'graylogapi/static_fields'
 require 'graylogapi/extractors'
 require 'graylogapi/streams'
+require 'graylogapi/stream_rules'
 require 'graylogapi/system'
 require 'graylogapi/users'
 require 'graylogapi/version'
@@ -37,6 +38,11 @@ class GraylogAPI
   # @return [GraylogAPI::Streams]
   def streams
     @streams ||= Streams.new(@client)
+  end
+
+  # @return [GraylogAPI::StreamsRules]
+  def stream_rules
+    @stream_rules ||= StreamRules.new(@client)
   end
 
   # @return [GraylogAPI::Dashboards]
