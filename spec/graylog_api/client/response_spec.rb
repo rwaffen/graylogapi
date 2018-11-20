@@ -1,5 +1,5 @@
 describe GraylogAPI::Client::Response, vcr: true do
-  include_context 'graylogapi'
+  include_context 'with graylogapi'
 
   subject(:response) { graylogapi.client.request(:get, '/') }
 

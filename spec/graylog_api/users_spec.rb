@@ -1,5 +1,5 @@
 describe GraylogAPI::Users, vcr: true do
-  include_context 'graylogapi'
+  include_context 'with graylogapi'
 
   context 'when get tokens of a user' do
     subject(:response) do

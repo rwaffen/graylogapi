@@ -1,5 +1,5 @@
 describe GraylogAPI::System::Inputs, vcr: true do
-  include_context 'graylogapi'
+  include_context 'with graylogapi'
 
   context 'when create input' do
     subject(:response) do

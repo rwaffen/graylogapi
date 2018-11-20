@@ -1,5 +1,5 @@
 describe GraylogAPI::System::Cluster, vcr: true do
-  include_context 'graylogapi'
+  include_context 'with graylogapi'
 
   context 'when node' do
     subject(:response) do

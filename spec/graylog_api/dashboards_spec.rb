@@ -1,5 +1,5 @@
 describe GraylogAPI::Dashboards, vcr: true do
-  include_context 'graylogapi'
+  include_context 'with graylogapi'
 
   context 'when create' do
     subject(:response) do

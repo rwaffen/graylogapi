@@ -1,7 +1,7 @@
 require 'securerandom'
 
 describe GraylogAPI::System::IndexSets, vcr: true do
-  include_context 'graylogapi'
+  include_context 'with graylogapi'
 
   let(:options) do
     {

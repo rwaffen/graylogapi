@@ -1,5 +1,5 @@
 describe GraylogAPI::StaticFields, vcr: true do
-  include_context 'graylogapi'
+  include_context 'with graylogapi'
 
   let(:input_options) do
     {

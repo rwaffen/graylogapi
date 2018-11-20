@@ -1,5 +1,5 @@
 describe GraylogAPI::Client, vcr: true do
-  include_context 'graylogapi'
+  include_context 'with graylogapi'
   let(:client) { graylogapi.client }
 
   context 'with success requests' do

@@ -1,5 +1,5 @@
 describe GraylogAPI::System, vcr: true do
-  include_context 'graylogapi'
+  include_context 'with graylogapi'
 
   context 'when overview' do
     subject(:response) do

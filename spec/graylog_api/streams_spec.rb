@@ -1,5 +1,5 @@
 describe GraylogAPI::Streams, vcr: true do
-  include_context 'graylogapi'
+  include_context 'with graylogapi'
 
   let(:index_id) { graylogapi.system.index_sets.all['index_sets'].find { |i| i['title'] == 'Default index set' }['id'] }
 
