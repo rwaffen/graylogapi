@@ -1,8 +1,21 @@
 language: ruby
 
+# rvm:
+#   - 2.4.4
+#   - 2.5.1
+#   - ruby-head
+
 matrix:
   include:
     - rvm: 2.4.1
+      script:
+        - bundle exec rubocop
+        - bundle exec rspec
+    - rvm: 2.5.1
+      script:
+        - bundle exec rubocop
+        - bundle exec rspec
+    - rvm: ruby-head
       script:
         - bundle exec rubocop
         - bundle exec rspec
