@@ -86,6 +86,10 @@ You can find more examples [here](./examples/)
   * clone(id, params) — Clone a stream.
   * pause(id) — Pause a stream.
   * resume(id) — Resume a stream.
+* **Stream/Rules**: Rules of a Stream.
+  * create(stream_id, params) — Add a rule to a stream.
+  * update(stream_id, stream_rule_id, params) — Update a stream rule.
+  * delete(stream_id, stream_rule_id) — Remove rule of a stream.
 * **System**: System informatino of this node.
   * overview — Get system overview.
   * jvm — Get JVM information.

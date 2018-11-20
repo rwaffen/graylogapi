@@ -29,7 +29,7 @@ class GraylogAPI
     # @param stream_id [Integer] id of a stream
     # @param stream_rule_id [String] id of a stream rule
     # @return [GraylogAPI::Client::Response]
-    def delete(stream_id, key)
+    def delete(stream_id, stream_rule_id)
       @client.request(:delete, "/streams/#{stream_id}/rules/#{stream_rule_id}")
     end
   end
