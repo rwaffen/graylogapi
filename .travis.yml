@@ -2,19 +2,6 @@ language: ruby
 
 matrix:
   include:
-    # centos 7 ruby
-    - rvm: 2.0.0p648
-      script:
-        - bundle exec rubocop
-        - bundle exec rspec
-    - rvm: 2.1.10
-      script:
-        - bundle exec rubocop
-        - bundle exec rspec
-    - rvm: 2.2.10
-      script:
-        - bundle exec rubocop
-        - bundle exec rspec
     - rvm: 2.3.8
       script:
         - bundle exec rubocop
