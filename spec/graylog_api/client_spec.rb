@@ -2,7 +2,7 @@ describe GraylogAPI::Client, vcr: true do
   include_context 'graylogapi'
   let(:client) { graylogapi.client }
 
-  context 'success requests' do
+  context 'with success requests' do
     let(:dashboard) do
       client.request(:post, '/dashboards', title: 'Test_Dashboard',
                                            description: 'Test_Dashboard')
@@ -41,7 +41,7 @@ describe GraylogAPI::Client, vcr: true do
     end
   end
 
-  context 'auth by token' do
+  context 'with auth by token' do
     subject(:api) { GraylogAPI.new(base_url: 'http://localhost:9000/api', token: token) }
 
     let(:token) { graylogapi.users.create_token('admin', 'rest')['token'] }

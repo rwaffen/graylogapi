@@ -30,6 +30,6 @@ describe GraylogAPI::Client::Response, vcr: true do
   end
 
   it 'raise if can`t parse body' do
-    expect { graylogapi.client.request(:get, '/inc_page') }.to raise_error
+    expect { graylogapi.client.request(:get, '/inc_page') }.to raise_error(ParseError)
   end
 end

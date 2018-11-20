@@ -1,7 +1,7 @@
 describe GraylogAPI::Dashboards, vcr: true do
   include_context 'graylogapi'
 
-  context 'create' do
+  context 'when create' do
     subject(:response) do
       dash = graylogapi.dashboards.create(title: 'create', description: 'create')
       graylogapi.dashboards.delete(dash['dashboard_id'])
@@ -17,7 +17,7 @@ describe GraylogAPI::Dashboards, vcr: true do
     end
   end
 
-  context 'all' do
+  context 'when all' do
     subject(:response) do
       graylogapi.dashboards.all
     end
@@ -35,7 +35,7 @@ describe GraylogAPI::Dashboards, vcr: true do
     end
   end
 
-  context 'by_id' do
+  context 'when by_id' do
     subject(:response) do
       dash = graylogapi.dashboards.create(title: 'id', description: 'id')
       res = graylogapi.dashboards.by_id(dash['dashboard_id'])
@@ -56,7 +56,7 @@ describe GraylogAPI::Dashboards, vcr: true do
     end
   end
 
-  context 'update' do
+  context 'when update' do
     subject(:response) do
       dash = graylogapi.dashboards.create(title: 'update', description: 'update')
       res = graylogapi.dashboards.update(dash['dashboard_id'], title: 'updated',
@@ -70,7 +70,7 @@ describe GraylogAPI::Dashboards, vcr: true do
     end
   end
 
-  context 'delete' do
+  context 'when delete' do
     subject(:response) do
       dash = graylogapi.dashboards.create(title: 'delete', description: 'delete')
       graylogapi.dashboards.delete(dash['dashboard_id'])

@@ -1,7 +1,7 @@
 describe GraylogAPI::System::Inputs::Types, vcr: true do
   include_context 'graylogapi'
 
-  context 'node' do
+  context 'when node' do
     subject(:response) do
       graylogapi.system.inputs.types.node
     end
@@ -15,7 +15,7 @@ describe GraylogAPI::System::Inputs::Types, vcr: true do
     end
   end
 
-  context 'all' do
+  context 'when all' do
     subject(:response) do
       graylogapi.system.inputs.types.all
     end
@@ -29,7 +29,7 @@ describe GraylogAPI::System::Inputs::Types, vcr: true do
     end
   end
 
-  context 'get input by type' do
+  context 'when get input by type' do
     subject(:response) do
       graylogapi.system.inputs.types.by_type(type)
     end
@@ -50,7 +50,7 @@ describe GraylogAPI::System::Inputs::Types, vcr: true do
     end
   end
 
-  context 'converge type_id to type_name' do
+  context 'when converge type_id to type_name' do
     subject(:response) do
       graylogapi.system.inputs.types.type_to_name(type)
     end

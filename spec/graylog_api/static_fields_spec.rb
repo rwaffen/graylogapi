@@ -13,7 +13,7 @@ describe GraylogAPI::StaticFields, vcr: true do
     }
   end
 
-  context 'create' do
+  context 'when create' do
     subject(:response) do
       input = graylogapi.system.inputs.create(input_options)
       res = graylogapi.static_fields.create(input['id'], key: 'static_key', value: 'value')
@@ -27,7 +27,7 @@ describe GraylogAPI::StaticFields, vcr: true do
     end
   end
 
-  context 'delete' do
+  context 'when delete' do
     subject(:response) do
       input = graylogapi.system.inputs.create(input_options)
       graylogapi.static_fields.create(input['id'], key: 'static_key', value: 'value')

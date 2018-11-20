@@ -3,7 +3,7 @@ describe GraylogAPI::Streams, vcr: true do
 
   let(:index_id) { graylogapi.system.index_sets.all['index_sets'].find { |i| i['title'] == 'Default index set' }['id'] }
 
-  context 'get all streams' do
+  context 'when get all streams' do
     subject(:response) do
       graylogapi.streams.all
     end
@@ -21,7 +21,7 @@ describe GraylogAPI::Streams, vcr: true do
     end
   end
 
-  context 'create stream' do
+  context 'when create stream' do
     subject(:response) do
       req = graylogapi.streams.create(title: 'test', index_set_id: index_id, rules: [])
       graylogapi.streams.delete(req['stream_id'])
@@ -37,7 +37,7 @@ describe GraylogAPI::Streams, vcr: true do
     end
   end
 
-  context 'enabled streams' do
+  context 'when enabled streams' do
     subject(:response) do
       graylogapi.streams.enabled
     end
@@ -55,7 +55,7 @@ describe GraylogAPI::Streams, vcr: true do
     end
   end
 
-  context 'get stream by id' do
+  context 'when get stream by id' do
     subject(:response) do
       req = graylogapi.streams.by_id(stream['id'])
       graylogapi.streams.delete(stream['id'])
@@ -79,7 +79,7 @@ describe GraylogAPI::Streams, vcr: true do
     end
   end
 
-  context 'update stream' do
+  context 'when update stream' do
     subject(:response) do
       req = graylogapi.streams.update(stream['stream_id'], title: 'test2')
       graylogapi.streams.delete(stream['stream_id'])
@@ -103,7 +103,7 @@ describe GraylogAPI::Streams, vcr: true do
     end
   end
 
-  context 'delete stream' do
+  context 'when delete stream' do
     subject(:response) do
       stream = graylogapi.streams.create(title: 'test', index_set_id: index_id, rules: [])
       graylogapi.streams.delete(stream['stream_id'])
@@ -114,7 +114,7 @@ describe GraylogAPI::Streams, vcr: true do
     end
   end
 
-  context 'clone stream' do
+  context 'when clone stream' do
     subject(:response) do
       created = graylogapi.streams.create(title: 'created', index_set_id: index_id)
       cloned = graylogapi.streams.clone(created['stream_id'], title: 'cloned', description: '', index_set_id: index_id)
@@ -132,7 +132,7 @@ describe GraylogAPI::Streams, vcr: true do
     end
   end
 
-  context 'pause stream' do
+  context 'when pause stream' do
     subject(:response) do
       stream = graylogapi.streams.create(title: 'pause', index_set_id: index_id)
       req = graylogapi.streams.pause(stream['stream_id'])
@@ -145,7 +145,7 @@ describe GraylogAPI::Streams, vcr: true do
     end
   end
 
-  context 'resume stream' do
+  context 'when resume stream' do
     subject(:response) do
       stream = graylogapi.streams.create(title: 'resume', index_set_id: index_id)
       req = graylogapi.streams.resume(stream['stream_id'])

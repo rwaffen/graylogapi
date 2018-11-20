@@ -1,7 +1,7 @@
 describe GraylogAPI::System, vcr: true do
   include_context 'graylogapi'
 
-  context 'overview' do
+  context 'when overview' do
     subject(:response) do
       graylogapi.system.overview
     end
@@ -15,7 +15,7 @@ describe GraylogAPI::System, vcr: true do
     end
   end
 
-  context 'jvm information' do
+  context 'when jvm information' do
     subject(:response) do
       graylogapi.system.jvm
     end
@@ -33,7 +33,7 @@ describe GraylogAPI::System, vcr: true do
     end
   end
 
-  context 'thread dump' do
+  context 'when thread dump' do
     subject(:response) do
       graylogapi.system.thread_dump
     end

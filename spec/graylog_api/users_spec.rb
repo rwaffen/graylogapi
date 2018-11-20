@@ -1,7 +1,7 @@
 describe GraylogAPI::Users, vcr: true do
   include_context 'graylogapi'
 
-  context 'get tokens of a user' do
+  context 'when get tokens of a user' do
     subject(:response) do
       graylogapi.users.tokens('admin')
     end
@@ -15,7 +15,7 @@ describe GraylogAPI::Users, vcr: true do
     end
   end
 
-  context 'create token for a user' do
+  context 'when create token for a user' do
     subject(:response) do
       res = graylogapi.users.create_token('admin', 'test')
       graylogapi.users.delete_token('admin', res['token'])
@@ -35,7 +35,7 @@ describe GraylogAPI::Users, vcr: true do
     end
   end
 
-  context 'remove token for a user' do
+  context 'when remove token for a user' do
     subject(:response) do
       token = graylogapi.users.create_token('admin', 'test')['token']
       graylogapi.users.delete_token('admin', token)

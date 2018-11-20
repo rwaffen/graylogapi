@@ -1,8 +1,17 @@
 ---
-#require: rubocop-rspec
+require: rubocop-rspec
 
-Metrics/LineLength:
-  Max: 140
+AllCops:
+  Exclude:
+    - 'test/fixtures/cookbooks/**/*'
+    - 'test/integration/**/*'
+    - 'vendor/**/*'
+
+Lint/UnifiedInteger:
+  Enabled: false
 
 Metrics/BlockLength:
-  Max: 150
+  ExcludedMethods: ['describe', 'context']
+
+Metrics/LineLength:
+  Enabled: false

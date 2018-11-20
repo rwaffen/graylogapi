@@ -27,7 +27,7 @@ describe GraylogAPI::System::IndexSets, vcr: true do
     }
   end
 
-  context 'get all index sets' do
+  context 'when get all index sets' do
     subject(:response) { graylogapi.system.index_sets.all }
 
     it 'code 200' do
@@ -47,7 +47,7 @@ describe GraylogAPI::System::IndexSets, vcr: true do
     end
   end
 
-  context 'get default index set' do
+  context 'when get default index set' do
     subject(:response) do
       graylogapi.system.index_sets.default
     end
@@ -57,7 +57,7 @@ describe GraylogAPI::System::IndexSets, vcr: true do
     end
   end
 
-  context 'create index set' do
+  context 'when create index set' do
     subject(:response) do
       create_options = options.dup
       title = generate_string
@@ -78,7 +78,7 @@ describe GraylogAPI::System::IndexSets, vcr: true do
     end
   end
 
-  context 'get index set by id' do
+  context 'when get index set by id' do
     subject(:response) do
       create_options = options.dup
       title = generate_string
@@ -104,7 +104,7 @@ describe GraylogAPI::System::IndexSets, vcr: true do
     end
   end
 
-  context 'update index set' do
+  context 'when update index set' do
     subject(:response) do
       create_options = options.dup
       update_options = options.dup
@@ -134,7 +134,7 @@ describe GraylogAPI::System::IndexSets, vcr: true do
     end
   end
 
-  context 'set default index set' do
+  context 'when set default index set' do
     subject(:response) do
       create_options = options.dup
       title = generate_string
@@ -159,7 +159,7 @@ describe GraylogAPI::System::IndexSets, vcr: true do
     end
   end
 
-  context 'delete index set' do
+  context 'when delete index set' do
     subject(:response) do
       create_options = options.dup
       title = generate_string

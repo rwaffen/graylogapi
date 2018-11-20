@@ -1,7 +1,7 @@
 describe GraylogAPI::System::Inputs, vcr: true do
   include_context 'graylogapi'
 
-  context 'create input' do
+  context 'when create input' do
     subject(:response) do
       options = { title: 'Test_create_input',
                   type: 'org.graylog.plugins.beats.BeatsInput',
@@ -24,7 +24,7 @@ describe GraylogAPI::System::Inputs, vcr: true do
     end
   end
 
-  context 'create input with type name insted of type' do
+  context 'when create input with type name insted of type' do
     subject(:response) do
       options = { title: 'Test_create_input',
                   type_name: 'Syslog UDP',
@@ -45,7 +45,7 @@ describe GraylogAPI::System::Inputs, vcr: true do
     end
   end
 
-  context 'update input' do
+  context 'when update input' do
     subject(:response) do
       options = { title: 'Input by gem123',
                   type: 'org.graylog.plugins.beats.BeatsInput',
@@ -68,7 +68,7 @@ describe GraylogAPI::System::Inputs, vcr: true do
     end
   end
 
-  context 'update input with type name instead of type' do
+  context 'when update input with type name instead of type' do
     subject(:response) do
       options = { title: 'Update_input',
                   type_name: 'Beats',
@@ -90,7 +90,7 @@ describe GraylogAPI::System::Inputs, vcr: true do
     end
   end
 
-  context 'get all inputs' do
+  context 'when get all inputs' do
     subject(:response) { graylogapi.system.inputs.all }
 
     it 'code 200' do
@@ -106,7 +106,7 @@ describe GraylogAPI::System::Inputs, vcr: true do
     end
   end
 
-  context 'get by id' do
+  context 'when get by id' do
     subject(:response) do
       options = { title: 'Input by gem123',
                   type: 'org.graylog.plugins.beats.BeatsInput',
