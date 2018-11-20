@@ -33,17 +33,17 @@ describe GraylogAPI::System, vcr: true do
     end
   end
 
-  # context 'thread dump' do
-  #   subject(:response) do
-  #     graylogapi.system.thread_dump
-  #   end
-  #
-  #   it 'code 200' do
-  #     expect(response.code).to eq 200
-  #   end
-  #
-  #   it 'contain thread dump' do
-  #     expect(response.keys).to include 'threaddump'
-  #   end
-  # end
+  context 'thread dump' do
+    subject(:response) do
+      graylogapi.system.thread_dump
+    end
+
+    it 'code 200' do
+      expect(response.code).to eq 200
+    end
+
+    it 'contain thread dump' do
+      expect(response.keys).to include 'threaddump'
+    end
+  end
 end
