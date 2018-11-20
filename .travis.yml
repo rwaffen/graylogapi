@@ -1,20 +1,11 @@
 language: ruby
 
-matrix:
-  include:
-    - rvm: 2.3.8
-      script:
-        - bundle exec rubocop
-        - bundle exec rspec
-    - rvm: 2.4.5
-      script:
-        - bundle exec rubocop
-        - bundle exec rspec
-    - rvm: 2.5.3
-      script:
-        - bundle exec rubocop
-        - bundle exec rspec
-    - rvm: ruby-head
-      script:
-        - bundle exec rubocop
-        - bundle exec rspec
+rvm:
+  - 2.3.8
+  - 2.4.5
+  - 2.5.3
+  - ruby-head
+
+script:
+  - bundle exec rubocop
+  - bundle exec rspec
