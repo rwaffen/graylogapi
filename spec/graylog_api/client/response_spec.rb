@@ -4,7 +4,7 @@ describe GraylogAPI::Client::Response, vcr: true do
   subject(:response) { graylogapi.client.request(:get, '/') }
 
   it 'have code' do
-    expect(response.code.class).to eq Fixnum
+    expect(response.code.class).to eq Integer
   end
 
   it 'have body' do
